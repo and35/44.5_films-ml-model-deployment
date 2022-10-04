@@ -1,0 +1,11 @@
+Tomamos 3 muestras aleatorias con la misma seed para hacer un test del modelo en FastAPI 
+ 
+# input dict: 
+{"352": {"opening_gross": 2074929.0, "screens": 77.0, "production_budget": 30000000, "title_year": 2002.0, "aspect_ratio": 1.85, "duration": 113.0, "cast_total_facebook_likes": 813, "budget": 45000000.0, "imdb_score": 7.2}, 
+ "1731": {"opening_gross": 17435092.0, "screens": 3008.0, "production_budget": 65000000, "title_year": 2012.0, "aspect_ratio": 2.35, "duration": 99.0, "cast_total_facebook_likes": 1375, "budget": 65000000.0, "imdb_score": 6.4}, 
+ "84": {"opening_gross": 27520040.0, "screens": 3401.0, "production_budget": 130000000, "title_year": 2013.0, "aspect_ratio": 2.35, "duration": 100.0, "cast_total_facebook_likes": 14168, "budget": 130000000.0, "imdb_score": 4.9}}
+ 
+# output dict: 
+{"352": {"worldwide_gross": 306776732}, 
+ "1731": {"worldwide_gross": 180148897},
+ "84": {"worldwide_gross": 251499665}}
