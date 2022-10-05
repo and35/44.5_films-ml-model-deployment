@@ -16,6 +16,7 @@ jobs:
       - name: Installing dependencies
         run: |
           pip install dvc[gs]
+          pip install dvc
           pip install -r test/requirements_test.txt
       - name: Test API
         run: |
