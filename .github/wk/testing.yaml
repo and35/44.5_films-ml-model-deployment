@@ -11,11 +11,11 @@ jobs:
       - name: Creating and activating virtualenv
         run: |
           pip3 install virtualenv
-          pip3 install pyOpenSSL --upgrade
           virtualenv venv
           source venv/bin/activate
       - name: Installing dependencies
         run: |
+          pip3 install pyOpenSSL --upgrade
           pip install dvc[gs]
           pip install -r test/requirements_test.txt
       - name: Test API
