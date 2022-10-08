@@ -12,16 +12,16 @@ def update_model(model: Pipeline) -> None:
 def save_simple_metrics_report(train_score: float, test_score: float, validation_score: float, model: Pipeline) -> None:
     with open('report.txt', 'w') as report_file:# creamos un documento 
 
-        report_file.write('# Model Pipeline Description')
+        report_file.write('# Model Pipeline Description'+'\n')
         # dado que nuestro modelo es un pipeline esta compuesto de dos pasos, el ciclo for obtendra estos valores:
         ### imputer:SimpleImputer()
         ### core_model:GradientBoostingRegressor(n_estimators=180)
         for key, value in model.named_steps.items():
             report_file.write(f'### {key}:{value.__repr__()}'+'\n')
 
-        report_file.write('### Train Score: {train_score}'+'\n') # ve a train.py para entender cada uno 
-        report_file.write('### Test Score: {test_score}'+'\n')
-        report_file.write('### Validation Score: {validation_score}'+'\n')
+        report_file.write(f'### Train Score: {train_score}'+'\n') # ve a train.py para entender cada uno 
+        report_file.write(f'### Test Score: {test_score}'+'\n')
+        report_file.write(f'### Validation Score: {validation_score}'+'\n')
 
 # graficamos el valor predicto y valor real
 # los valores que se mueven de la diagonal son aquellos que el modelo no puede predecir bien 
